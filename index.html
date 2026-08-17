@@ -70,15 +70,16 @@ nav a:hover {
   color: #ed7100;
 }
 
-nav a:first-child::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 32px;
-  height: 3px;
+.nav-contact {
   background: #ed7100;
-  border-radius: 3px;
+  color: white !important;
+  padding: 10px 18px !important;
+  border-radius: 5px;
+}
+
+.nav-contact:hover {
+  background: #d65f00;
+  color: white !important;
 }
 
     .btn {
@@ -393,7 +394,7 @@ nav a:first-child::after {
     <a href="#cursos">CURSOS</a>
     <a href="#certificaciones">CERTIFICACIONES</a>
     <a href="#diplomados">DIPLOMADOS</a>
-    <a href="#contacto">CONTACTO</a>
+    <a href="#contacto" class="nav-contact">CONTACTO</a>
   </nav>
 </header>
 
