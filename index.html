@@ -209,7 +209,56 @@ nav a:hover {
   line-height: 1.35;
   color: #102f57;
 }
-    .featured-courses {
+    .modalities-section {
+  background: #f7f9fc;
+}
+
+.modalities {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.modality {
+  background: #ffffff;
+  border: 1px solid #e4e9ef;
+  border-radius: 14px;
+  padding: 35px 28px;
+  text-align: center;
+  transition: all .25s ease;
+}
+
+.modality:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(16,47,87,.10);
+  border-color: #ed7100;
+}
+
+.modality-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: #fff3e8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+}
+
+.modality h3 {
+  color: #102f57;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.modality p {
+  color: #657386;
+  font-size: 14px;
+  line-height: 1.6;
+}.featured-courses {
   background: #ffffff;
 }
 
@@ -608,7 +657,9 @@ footer a:hover {
       }
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 700px) {  .modalities {
+    grid-template-columns: 1fr;
+  }
       header {
         flex-direction: column;
         gap: 15px;
@@ -787,7 +838,46 @@ footer a:hover {
   </div>
 </section>
 
-<section class="section featured-courses" id="cursos-destacados">
+<section class="section modalities-section">
+
+  <div class="section-title">
+    <h2>MODALIDADES DE FORMACIÓN</h2>
+    <div class="orange-line"></div>
+    <p>Elige la modalidad que mejor se adapte a tus necesidades.</p>
+  </div>
+
+  <div class="modalities">
+
+    <div class="modality">
+      <div class="modality-icon">💻</div>
+      <h3>Online</h3>
+      <p>
+        Aprende desde cualquier lugar mediante una modalidad
+        flexible y accesible.
+      </p>
+    </div>
+
+    <div class="modality">
+      <div class="modality-icon">🎓</div>
+      <h3>Programas especializados</h3>
+      <p>
+        Formación orientada al desarrollo de conocimientos
+        y competencias profesionales.
+      </p>
+    </div>
+
+    <div class="modality">
+      <div class="modality-icon">📚</div>
+      <h3>Formación continua</h3>
+      <p>
+        Actualiza tus conocimientos y continúa desarrollando
+        tu perfil profesional.
+      </p>
+    </div>
+
+  </div>
+
+</section><section class="section featured-courses" id="cursos-destacados">
 
   <div class="section-title">
     <h2>CURSOS DESTACADOS</h2>
