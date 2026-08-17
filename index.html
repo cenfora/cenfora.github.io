@@ -52,21 +52,34 @@
     }
 
     nav {
-      display: flex;
-      gap: 28px;
-      align-items: center;
-    }
+  display: flex;
+  gap: 26px;
+  align-items: center;
+}
 
-    nav a {
-      text-decoration: none;
-      color: #102f57;
-      font-size: 14px;
-      font-weight: 600;
-    }
+nav a {
+  text-decoration: none;
+  color: #102f57;
+  font-size: 13px;
+  font-weight: 700;
+  position: relative;
+  padding: 10px 0;
+}
 
-    nav a:hover {
-      color: #ed7100;
-    }
+nav a:hover {
+  color: #ed7100;
+}
+
+nav a:first-child::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 32px;
+  height: 3px;
+  background: #ed7100;
+  border-radius: 3px;
+}
 
     .btn {
       display: inline-block;
