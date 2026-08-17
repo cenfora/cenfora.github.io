@@ -1,1 +1,590 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CENFORA | Centro de Formación y Certificación Avanzada</title>
 
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      color: #102f57;
+      background: #ffffff;
+      line-height: 1.6;
+    }
+
+    header {
+      width: 100%;
+      padding: 18px 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 30px;
+      font-weight: 800;
+      color: #0b315d;
+    }
+
+    .logo span {
+      color: #ed7100;
+    }
+
+    .logo small {
+      display: block;
+      font-size: 10px;
+      line-height: 1.1;
+      letter-spacing: .5px;
+      color: #173b68;
+      font-weight: 600;
+    }
+
+    nav {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #102f57;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: #ed7100;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: .2s;
+    }
+
+    .btn-orange {
+      background: #ed7100;
+      color: white;
+    }
+
+    .btn-orange:hover {
+      background: #d65f00;
+    }
+
+    .btn-outline {
+      border: 2px solid #102f57;
+      color: #102f57;
+      margin-left: 10px;
+    }
+
+    .hero {
+      min-height: 570px;
+      display: flex;
+      align-items: center;
+      padding: 70px 7%;
+      background: linear-gradient(110deg, #f8fbff 0%, #ffffff 55%, #eef5fb 100%);
+    }
+
+    .hero-content {
+      max-width: 650px;
+    }
+
+    .hero h1 {
+      font-size: 58px;
+      line-height: 1.08;
+      margin-bottom: 25px;
+      color: #102f57;
+    }
+
+    .hero h1 span {
+      color: #ed7100;
+    }
+
+    .hero p {
+      font-size: 19px;
+      color: #4c5d70;
+      max-width: 550px;
+      margin-bottom: 30px;
+    }
+
+    .section {
+      padding: 75px 6%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 34px;
+      color: #102f57;
+      margin-bottom: 8px;
+    }
+
+    .section-title p {
+      color: #657386;
+    }
+
+    .orange-line {
+      width: 55px;
+      height: 4px;
+      background: #ed7100;
+      margin: 12px auto;
+    }
+
+    .areas {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 15px;
+    }
+
+    .area {
+      padding: 28px 12px;
+      text-align: center;
+      border: 1px solid #e2e7ed;
+      border-radius: 10px;
+      background: white;
+      transition: .2s;
+    }
+
+    .area:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(16,47,87,.08);
+    }
+
+    .area-icon {
+      font-size: 35px;
+      margin-bottom: 12px;
+    }
+
+    .area h3 {
+      font-size: 15px;
+      color: #102f57;
+    }
+
+    .offer-section {
+      background: #f4f8fc;
+    }
+
+    .offers {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      padding: 35px 25px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(16,47,87,.06);
+      border: 1px solid #e5eaf0;
+    }
+
+    .card-icon {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      font-size: 24px;
+      color: #102f57;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #657386;
+      min-height: 75px;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 20px;
+      color: #ed7100;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .why {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 25px;
+      text-align: center;
+    }
+
+    .why-item {
+      padding: 15px;
+    }
+
+    .why-item .icon {
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    .why-item h3 {
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+
+    .why-item p {
+      color: #657386;
+      font-size: 14px;
+    }
+
+    .stats {
+      background: #102f57;
+      color: white;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      text-align: center;
+      padding: 55px 6%;
+    }
+
+    .stat h2 {
+      font-size: 38px;
+      color: #ed7100;
+    }
+
+    .stat p {
+      font-size: 15px;
+    }
+
+    .cta {
+      padding: 60px 7%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      background: #f7f9fc;
+    }
+
+    .cta h2 {
+      font-size: 30px;
+      color: #102f57;
+    }
+
+    footer {
+      background: #092849;
+      color: white;
+      padding: 45px 6% 20px;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 50px;
+      margin-bottom: 35px;
+    }
+
+    footer h3 {
+      margin-bottom: 12px;
+    }
+
+    footer p,
+    footer a {
+      color: #dce6f0;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .copyright {
+      border-top: 1px solid rgba(255,255,255,.15);
+      padding-top: 18px;
+      text-align: center;
+      font-size: 13px;
+      color: #c5d2df;
+    }
+
+    @media (max-width: 1000px) {
+      nav {
+        gap: 12px;
+      }
+
+      .areas {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .offers {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .why {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero {
+        padding: 55px 7%;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      .areas,
+      .offers,
+      .why,
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .cta {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    CEN<span>FORA</span>
+    <small>CENTRO DE FORMACIÓN Y CERTIFICACIÓN AVANZADA</small>
+  </div>
+
+  <nav>
+    <a href="#inicio">INICIO</a>
+    <a href="#nosotros">NOSOTROS</a>
+    <a href="#cursos">CURSOS</a>
+    <a href="#certificaciones">CERTIFICACIONES</a>
+    <a href="#diplomados">DIPLOMADOS</a>
+    <a href="#contacto">CONTACTO</a>
+  </nav>
+</header>
+
+<section class="hero" id="inicio">
+  <div class="hero-content">
+    <h1>Formación que impulsa tu <span>futuro profesional</span></h1>
+
+    <p>
+      Capacítate, desarrolla nuevas competencias y fortalece tu perfil
+      profesional con CENFORA.
+    </p>
+
+    <a href="#cursos" class="btn btn-orange">VER CURSOS →</a>
+    <a href="#contacto" class="btn btn-outline">SOLICITAR INFORMACIÓN</a>
+  </div>
+</section>
+
+<section class="section" id="nosotros">
+  <div class="section-title">
+    <h2>ÁREAS DE FORMACIÓN</h2>
+    <div class="orange-line"></div>
+    <p>Desarrolla tus habilidades en áreas de alta demanda profesional.</p>
+  </div>
+
+  <div class="areas">
+    <div class="area">
+      <div class="area-icon">👥</div>
+      <h3>Gestión y Administración</h3>
+    </div>
+
+    <div class="area">
+      <div class="area-icon">💻</div>
+      <h3>Tecnología y Herramientas Digitales</h3>
+    </div>
+
+    <div class="area">
+      <div class="area-icon">📊</div>
+      <h3>Excel y Power BI</h3>
+    </div>
+
+    <div class="area">
+      <div class="area-icon">🏗️</div>
+      <h3>Ingeniería y Construcción</h3>
+    </div>
+
+    <div class="area">
+      <div class="area-icon">🏛️</div>
+      <h3>Gestión Pública</h3>
+    </div>
+
+    <div class="area">
+      <div class="area-icon">🤝</div>
+      <h3>Recursos Humanos</h3>
+    </div>
+
+    <div class="area">
+      <div class="area-icon">💰</div>
+      <h3>Finanzas y Contabilidad</h3>
+    </div>
+  </div>
+</section>
+
+<section class="section offer-section" id="cursos">
+  <div class="section-title">
+    <h2>NUESTRA OFERTA ACADÉMICA</h2>
+    <div class="orange-line"></div>
+  </div>
+
+  <div class="offers">
+
+    <div class="card">
+      <div class="card-icon">📖</div>
+      <h3>Cursos</h3>
+      <p>Capacitaciones prácticas y actualizadas para fortalecer tus competencias.</p>
+      <a href="#">Ver cursos →</a>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">🎓</div>
+      <h3>Programas Especializados</h3>
+      <p>Programas diseñados para desarrollar conocimientos y habilidades específicas.</p>
+      <a href="#">Ver programas →</a>
+    </div>
+
+    <div class="card" id="diplomados">
+      <div class="card-icon">🏅</div>
+      <h3>Diplomados</h3>
+      <p>Programas de formación especializada para impulsar tu desarrollo profesional.</p>
+      <a href="#">Próximamente →</a>
+    </div>
+
+    <div class="card" id="certificaciones">
+      <div class="card-icon">📜</div>
+      <h3>Certificaciones</h3>
+      <p>Acredita tus conocimientos y fortalece tu perfil profesional.</p>
+      <a href="#">Ver certificaciones →</a>
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-title">
+    <h2>¿POR QUÉ ELEGIR CENFORA?</h2>
+    <div class="orange-line"></div>
+  </div>
+
+  <div class="why">
+
+    <div class="why-item">
+      <div class="icon">📜</div>
+      <h3>Certificación</h3>
+      <p>Documentación que respalda tu formación.</p>
+    </div>
+
+    <div class="why-item">
+      <div class="icon">👨‍🏫</div>
+      <h3>Formación profesional</h3>
+      <p>Contenidos orientados al desarrollo de competencias.</p>
+    </div>
+
+    <div class="why-item">
+      <div class="icon">💻</div>
+      <h3>Metodología práctica</h3>
+      <p>Aprendizaje enfocado en conocimientos aplicables.</p>
+    </div>
+
+    <div class="why-item">
+      <div class="icon">⏰</div>
+      <h3>Flexibilidad</h3>
+      <p>Opciones pensadas para estudiantes y profesionales.</p>
+    </div>
+
+    <div class="why-item">
+      <div class="icon">📈</div>
+      <h3>Desarrollo profesional</h3>
+      <p>Impulsa tu perfil y amplía tus oportunidades.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="stats">
+  <div class="stat">
+    <h2>+2,000</h2>
+    <p>Personas capacitadas</p>
+  </div>
+
+  <div class="stat">
+    <h2>+50</h2>
+    <p>Cursos y programas</p>
+  </div>
+
+  <div class="stat">
+    <h2>+1,500</h2>
+    <p>Certificaciones emitidas</p>
+  </div>
+
+  <div class="stat">
+    <h2>95%</h2>
+    <p>Satisfacción</p>
+  </div>
+</section>
+
+<section class="cta" id="contacto">
+  <div>
+    <h2>¿Tienes alguna consulta?</h2>
+    <p>Estamos listos para ayudarte.</p>
+  </div>
+
+  <a href="#" class="btn btn-orange">SOLICITAR INFORMACIÓN →</a>
+</section>
+
+<footer>
+  <div class="footer-content">
+
+    <div>
+      <h3>CENFORA</h3>
+      <p>Centro de Formación y Certificación Avanzada.</p>
+      <p>Formación para el desarrollo académico y profesional.</p>
+    </div>
+
+    <div>
+      <h3>Enlaces</h3>
+      <p><a href="#inicio">Inicio</a></p>
+      <p><a href="#cursos">Cursos</a></p>
+      <p><a href="#certificaciones">Certificaciones</a></p>
+      <p><a href="#diplomados">Diplomados</a></p>
+    </div>
+
+    <div>
+      <h3>Contacto</h3>
+      <p>WhatsApp</p>
+      <p>Correo electrónico</p>
+      <p>Redes sociales</p>
+    </div>
+
+  </div>
+
+  <div class="copyright">
+    © 2026 CENFORA - Centro de Formación y Certificación Avanzada S.A.C. Todos los derechos reservados.
+  </div>
+</footer>
+
+</body>
+</html>
