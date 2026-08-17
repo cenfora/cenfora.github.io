@@ -258,6 +258,69 @@ nav a:hover {
   color: #657386;
   font-size: 14px;
   line-height: 1.6;
+}.future-section {
+  background: #102f57;
+  color: white;
+}
+
+.future-container {
+  max-width: 1150px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.3fr .7fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.future-text h2 {
+  font-size: 38px;
+  line-height: 1.2;
+  margin: 12px 0 18px;
+}
+
+.future-text p {
+  color: #dce6f0;
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 650px;
+}
+
+.future-list {
+  margin-top: 25px;
+  display: grid;
+  gap: 12px;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.future-list div::first-letter {
+  color: #ed7100;
+}
+
+.future-card {
+  background: #ffffff;
+  color: #102f57;
+  padding: 40px 30px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0,0,0,.12);
+}
+
+.future-number {
+  font-size: 48px;
+  font-weight: 800;
+  color: #ed7100;
+  margin-bottom: 10px;
+}
+
+.future-card h3 {
+  font-size: 23px;
+  margin-bottom: 10px;
+}
+
+.future-card p {
+  color: #657386;
+  font-size: 14px;
 }.featured-courses {
   background: #ffffff;
 }
@@ -657,7 +720,14 @@ footer a:hover {
       }
     }
 
-    @media (max-width: 700px) {  .modalities {
+    @media (max-width: 700px) {  .future-container {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .future-text h2 {
+    font-size: 30px;
+  }  .modalities {
     grid-template-columns: 1fr;
   }
       header {
@@ -872,6 +942,41 @@ footer a:hover {
       <p>
         Actualiza tus conocimientos y continúa desarrollando
         tu perfil profesional.
+      </p>
+    </div>
+
+  </div>
+
+</section><section class="section future-section">
+
+  <div class="future-container">
+
+    <div class="future-text">
+      <span class="about-label">PRÓXIMAMENTE EN CENFORA</span>
+
+      <h2>Nuevos programas para seguir creciendo</h2>
+
+      <div class="orange-line about-line"></div>
+
+      <p>
+        Estamos desarrollando nuevas propuestas de formación para
+        ampliar nuestra oferta académica y acompañarte en cada etapa
+        de tu crecimiento profesional.
+      </p>
+
+      <div class="future-list">
+        <div>✓ Nuevos cursos especializados</div>
+        <div>✓ Programas de formación profesional</div>
+        <div>✓ Diplomados CENFORA</div>
+      </div>
+    </div>
+
+    <div class="future-card">
+      <div class="future-number">2026</div>
+      <h3>Seguimos creciendo</h3>
+      <p>
+        Muy pronto encontrarás nuevas alternativas de formación
+        dentro de CENFORA.
       </p>
     </div>
 
