@@ -209,7 +209,95 @@ nav a:hover {
   line-height: 1.35;
   color: #102f57;
 }
-    .offer-section {
+    .featured-courses {
+  background: #ffffff;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.course-card {
+  background: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #e5eaf0;
+  box-shadow: 0 8px 25px rgba(16,47,87,.06);
+  transition: all .25s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 15px 35px rgba(16,47,87,.12);
+}
+
+.course-image {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.course-image.excel {
+  background: linear-gradient(135deg, #102f57, #1f6f8b);
+}
+
+.course-image.powerbi {
+  background: linear-gradient(135deg, #ed7100, #f4a261);
+}
+
+.course-image.gestion {
+  background: linear-gradient(135deg, #243b53, #486581);
+}
+
+.course-content {
+  padding: 25px;
+}
+
+.course-tag {
+  font-size: 10px;
+  font-weight: 800;
+  color: #ed7100;
+  letter-spacing: .6px;
+}
+
+.course-content h3 {
+  font-size: 22px;
+  color: #102f57;
+  margin: 8px 0 10px;
+}
+
+.course-content p {
+  font-size: 14px;
+  color: #657386;
+  line-height: 1.6;
+  min-height: 68px;
+}
+
+.course-content a {
+  display: inline-block;
+  margin-top: 15px;
+  color: #ed7100;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.course-content a:hover {
+  color: #102f57;
+}
+
+.courses-button {
+  text-align: center;
+  margin-top: 40px;
+}.offer-section {
       background: #f4f8fc;
     }
 
@@ -416,7 +504,11 @@ footer a:hover {
       color: #c5d2df;
     }
 
-    @media (max-width: 1000px) {
+      .course-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }@media (max-width: 1000px) {  .course-grid {
+    grid-template-columns: 1fr;
+  }
       nav {
         gap: 12px;
       }
@@ -599,7 +691,70 @@ footer a:hover {
   </div>
 </section>
 
-<section class="section">
+<section class="section featured-courses" id="cursos-destacados">
+
+  <div class="section-title">
+    <h2>CURSOS DESTACADOS</h2>
+    <div class="orange-line"></div>
+    <p>Fortalece tus conocimientos con nuestros próximos cursos.</p>
+  </div>
+
+  <div class="course-grid">
+
+    <div class="course-card">
+      <div class="course-image excel">
+        <span>EXCEL</span>
+      </div>
+      <div class="course-content">
+        <span class="course-tag">HERRAMIENTAS DIGITALES</span>
+        <h3>Excel Avanzado</h3>
+        <p>
+          Desarrolla habilidades para trabajar con funciones,
+          análisis de datos y herramientas avanzadas.
+        </p>
+        <a href="#contacto">Más información →</a>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <div class="course-image powerbi">
+        <span>POWER BI</span>
+      </div>
+      <div class="course-content">
+        <span class="course-tag">TECNOLOGÍA</span>
+        <h3>Power BI</h3>
+        <p>
+          Aprende a transformar datos en información útil
+          para la toma de decisiones.
+        </p>
+        <a href="#contacto">Más información →</a>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <div class="course-image gestion">
+        <span>GESTIÓN</span>
+      </div>
+      <div class="course-content">
+        <span class="course-tag">GESTIÓN PROFESIONAL</span>
+        <h3>Gestión Administrativa</h3>
+        <p>
+          Fortalece tus conocimientos en organización,
+          gestión y herramientas administrativas.
+        </p>
+        <a href="#contacto">Más información →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="courses-button">
+    <a href="#cursos" class="btn btn-outline">
+      VER TODOS LOS CURSOS
+    </a>
+  </div>
+
+</section><section class="section">
   <div class="section-title">
     <h2>¿POR QUÉ FORMARTE EN CENFORA?</h2>
     <div class="orange-line"></div>
