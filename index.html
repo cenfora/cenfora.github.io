@@ -174,28 +174,31 @@ nav a:hover {
       margin: 12px auto;
     }
 
-    .areas {
-      display: grid;
-      grid-template-columns: repeat(7, 1fr);
-      gap: 15px;
-    }
+ .areas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-    .area {
-  padding: 30px 15px;
+.area {
+  padding: 28px 16px;
   text-align: center;
-  border: 1px solid #e5eaf0;
+  border: 1px solid #e2e7ed;
   border-radius: 12px;
   background: #ffffff;
-  transition: all .25s ease;
   min-height: 145px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
+  transition: all .25s ease;
 }
 
 .area:hover {
-  transform: translateY(-7px);
-  box-shadow: 0 12px 30px rgba(16,47,87,.10);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(16,47,87,.10);
   border-color: #ed7100;
 }
 
@@ -208,6 +211,7 @@ nav a:hover {
   font-size: 14px;
   line-height: 1.35;
   color: #102f57;
+  max-width: 190px;
 }
     .modalities-section {
   background: #f7f9fc;
@@ -708,8 +712,8 @@ footer a:hover {
       }
 
       .areas {
-        grid-template-columns: repeat(4, 1fr);
-      }
+  grid-template-columns: repeat(3, 1fr);
+}
 
       .offers {
         grid-template-columns: repeat(2, 1fr);
@@ -727,7 +731,19 @@ footer a:hover {
   .future-container {
     grid-template-columns: 1fr;
     gap: 35px;
+   .areas {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
   }
+
+  .area {
+    min-height: 125px;
+    padding: 22px 10px;
+  }
+
+  .area h3 {
+    font-size: 12px;
+  } }
 
   header {
     padding: 15px 5%;
