@@ -83,28 +83,40 @@ nav a:hover {
 }
 
     .btn {
-      display: inline-block;
-      padding: 13px 24px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 700;
-      transition: .2s;
-    }
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 26px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  transition: all .25s ease;
+  cursor: pointer;
+}
 
-    .btn-orange {
-      background: #ed7100;
-      color: white;
-    }
+.btn-orange {
+  background: #ed7100;
+  color: white;
+  box-shadow: 0 8px 18px rgba(237,113,0,.20);
+}
 
-    .btn-orange:hover {
-      background: #d65f00;
-    }
+.btn-orange:hover {
+  background: #d65f00;
+  transform: translateY(-2px);
+}
 
-    .btn-outline {
-      border: 2px solid #102f57;
-      color: #102f57;
-      margin-left: 10px;
-    }
+.btn-outline {
+  border: 2px solid #102f57;
+  color: #102f57;
+  margin-left: 10px;
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: #102f57;
+  color: white;
+}
 
     .hero {
       min-height: 570px;
