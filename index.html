@@ -297,6 +297,81 @@ nav a:hover {
 .courses-button {
   text-align: center;
   margin-top: 40px;
+}.about-section {
+  background: #f7f9fc;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.about-label {
+  color: #ed7100;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.about-text h2 {
+  font-size: 38px;
+  line-height: 1.2;
+  color: #102f57;
+  margin: 12px 0 15px;
+}
+
+.about-line {
+  margin: 0 0 22px;
+}
+
+.about-text p {
+  color: #657386;
+  font-size: 15px;
+  margin-bottom: 18px;
+  line-height: 1.7;
+}
+
+.about-text .btn {
+  margin-top: 10px;
+}
+
+.about-box {
+  background: #102f57;
+  border-radius: 14px;
+  padding: 15px;
+  box-shadow: 0 15px 35px rgba(16,47,87,.12);
+}
+
+.about-item {
+  display: flex;
+  gap: 20px;
+  padding: 25px 20px;
+  border-bottom: 1px solid rgba(255,255,255,.12);
+}
+
+.about-item:last-child {
+  border-bottom: none;
+}
+
+.about-item > span {
+  color: #ed7100;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.about-item h3 {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.about-item p {
+  color: #dce6f0;
+  font-size: 13px;
 }.offer-section {
       background: #f4f8fc;
     }
@@ -506,6 +581,13 @@ footer a:hover {
 
       .course-grid {
     grid-template-columns: repeat(2, 1fr);
+  }  .about-container {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .about-text h2 {
+    font-size: 30px;
   }@media (max-width: 1000px) {  .course-grid {
     grid-template-columns: 1fr;
   }
@@ -595,52 +677,66 @@ footer a:hover {
   </div>
 </section>
 
-<section class="section" id="nosotros">
-  <div class="section-title">
-    <h2>ÁREAS DE FORMACIÓN PROFESIONAL</h2>
-    <div class="orange-line"></div>
-    <p>Encuentra oportunidades de aprendizaje para fortalecer tus conocimientos y competencias.</p>
+ <section class="section about-section" id="nosotros">
+
+  <div class="about-container">
+
+    <div class="about-text">
+      <span class="about-label">CONOCE CENFORA</span>
+
+      <h2>Formación para impulsar tu desarrollo profesional</h2>
+
+      <div class="orange-line about-line"></div>
+
+      <p>
+        CENFORA - Centro de Formación y Certificación Avanzada
+        es una institución orientada a brindar oportunidades de
+        capacitación y desarrollo de competencias para estudiantes,
+        profesionales y personas que buscan fortalecer su perfil.
+      </p>
+
+      <p>
+        Nuestra propuesta integra formación, actualización y
+        certificación, con una visión de crecimiento continuo
+        hacia nuevos cursos, programas especializados y diplomados.
+      </p>
+
+      <a href="#cursos" class="btn btn-orange">
+        CONOCE NUESTRA FORMACIÓN →
+      </a>
+    </div>
+
+    <div class="about-box">
+
+      <div class="about-item">
+        <span>01</span>
+        <div>
+          <h3>Formación</h3>
+          <p>Contenidos orientados al desarrollo de competencias.</p>
+        </div>
+      </div>
+
+      <div class="about-item">
+        <span>02</span>
+        <div>
+          <h3>Actualización</h3>
+          <p>Aprendizaje enfocado en las necesidades profesionales.</p>
+        </div>
+      </div>
+
+      <div class="about-item">
+        <span>03</span>
+        <div>
+          <h3>Certificación</h3>
+          <p>Respaldo documental de la formación realizada.</p>
+        </div>
+      </div>
+
+    </div>
+
   </div>
 
-  <div class="areas">
-    <div class="area">
-      <div class="area-icon">👥</div>
-      <h3>Gestión y Administración</h3>
-    </div>
-
-    <div class="area">
-      <div class="area-icon">💻</div>
-      <h3>Tecnología y Herramientas Digitales</h3>
-    </div>
-
-    <div class="area">
-      <div class="area-icon">📊</div>
-      <h3>Excel y Power BI</h3>
-    </div>
-
-    <div class="area">
-      <div class="area-icon">🏗️</div>
-      <h3>Ingeniería y Construcción</h3>
-    </div>
-
-    <div class="area">
-      <div class="area-icon">🏛️</div>
-      <h3>Gestión Pública</h3>
-    </div>
-
-    <div class="area">
-      <div class="area-icon">🤝</div>
-      <h3>Recursos Humanos</h3>
-    </div>
-
-    <div class="area">
-      <div class="area-icon">💰</div>
-      <h3>Finanzas y Contabilidad</h3>
-    </div>
-  </div>
-</section>
-
-<section class="section offer-section" id="cursos">
+</section>id="cursos">
   <div class="section-title">
     <h2>FORMACIÓN CENFORA</h2>
     <div class="orange-line"></div>
