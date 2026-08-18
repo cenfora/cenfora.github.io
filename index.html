@@ -343,7 +343,89 @@ nav a:hover {
 .future-card p {
   color: #657386;
   font-size: 14px;
-}.featured-courses {
+}.area-catalog-section {
+  background: #f7f9fc;
+}
+
+.catalog-message {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 55px 35px;
+  background: #ffffff;
+  border: 1px solid #e4e9ef;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(16,47,87,.06);
+}
+
+.catalog-icon {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+.catalog-message h3 {
+  color: #102f57;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.catalog-message p {
+  color: #657386;
+  font-size: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.catalog-cards {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.catalog-card {
+  background: #ffffff;
+  border: 1px solid #e4e9ef;
+  border-radius: 12px;
+  padding: 28px;
+  transition: all .25s ease;
+}
+
+.catalog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(16,47,87,.10);
+  border-color: #ed7100;
+}
+
+.catalog-card .catalog-tag {
+  color: #ed7100;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .8px;
+}
+
+.catalog-card h3 {
+  color: #102f57;
+  font-size: 20px;
+  margin: 8px 0 10px;
+}
+
+.catalog-card p {
+  color: #657386;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.catalog-card a {
+  display: inline-block;
+  margin-top: 18px;
+  color: #ed7100;
+  text-decoration: none;
+  font-weight: 700;
+}
+    .featured-courses {
   background: #ffffff;
 }
 
@@ -742,7 +824,17 @@ footer a:hover {
       }
     }
 
-    @media (max-width: 700px) {  .future-container {
+    @media (max-width: 700px) {  .catalog-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .catalog-message {
+    padding: 40px 22px;
+  }
+
+  .catalog-message h3 {
+    font-size: 22px;
+  }  .future-container {
     grid-template-columns: 1fr;
     gap: 35px;
   @media (max-width: 700px) {
@@ -1069,6 +1161,30 @@ footer a:hover {
 
   </div>
 
+</section><section class="section area-catalog-section" id="catalogo-area">
+
+  <div class="section-title">
+    <span class="about-label">OFERTA ACADÉMICA</span>
+    <h2 id="area-title">FORMACIÓN POR ÁREAS</h2>
+    <div class="orange-line"></div>
+    <p id="area-description">
+      Explora nuestra propuesta de formación según tu área de interés.
+    </p>
+  </div>
+
+  <div class="catalog-message" id="catalog-message">
+
+    <div class="catalog-icon">📚</div>
+
+    <h3>Selecciona un área de formación</h3>
+
+    <p>
+      Elige una de nuestras áreas para conocer los cursos,
+      programas y diplomados disponibles.
+    </p>
+
+  </div>
+
 </section><section class="section modalities-section">
 
   <div class="section-title">
@@ -1312,5 +1428,160 @@ footer a:hover {
   </div>
 </footer>
 
+<script>
+
+const areasCenfora = {
+
+  ingenieria: {
+    title: "Ingeniería y Construcción",
+    description: "Formación especializada orientada al desarrollo de competencias en ingeniería, construcción y gestión de proyectos.",
+    courses: []
+  },
+
+  derecho: {
+    title: "Derecho",
+    description: "Programas y cursos orientados al fortalecimiento de conocimientos jurídicos y profesionales.",
+    courses: []
+  },
+
+  contabilidad: {
+    title: "Contabilidad, Finanzas y Tributación",
+    description: "Formación orientada al desarrollo de conocimientos contables, financieros y tributarios.",
+    courses: []
+  },
+
+  administracion: {
+    title: "Administración y Gestión Empresarial",
+    description: "Capacitación para fortalecer competencias de gestión, administración y dirección empresarial.",
+    courses: []
+  },
+
+  "gestion-publica": {
+    title: "Gestión Pública",
+    description: "Formación orientada a la gestión y administración dentro del sector público.",
+    courses: []
+  },
+
+  "recursos-humanos": {
+    title: "Recursos Humanos",
+    description: "Desarrollo de competencias relacionadas con la gestión del talento y las personas.",
+    courses: []
+  },
+
+  tecnologia: {
+    title: "Tecnología y Herramientas Digitales",
+    description: "Cursos orientados al dominio de herramientas digitales y tecnologías aplicadas.",
+    courses: []
+  },
+
+  economia: {
+    title: "Economía, Negocios y Emprendimiento",
+    description: "Formación para fortalecer conocimientos en economía, negocios y emprendimiento.",
+    courses: []
+  },
+
+  marketing: {
+    title: "Marketing y Comunicación",
+    description: "Desarrollo de competencias en marketing, comunicación y estrategias digitales.",
+    courses: []
+  },
+
+  psicologia: {
+    title: "Psicología",
+    description: "Formación y actualización en diferentes áreas relacionadas con la psicología.",
+    courses: []
+  },
+
+  salud: {
+    title: "Ciencias de la Salud",
+    description: "Formación orientada a diferentes disciplinas y áreas relacionadas con la salud.",
+    courses: []
+  },
+
+  educacion: {
+    title: "Educación y Docencia",
+    description: "Programas orientados al desarrollo profesional en educación y docencia.",
+    courses: []
+  }
+
+};
+
+function mostrarArea(area) {
+
+  const datos = areasCenfora[area];
+
+  if (!datos) return;
+
+  const titulo = document.getElementById("area-title");
+  const descripcion = document.getElementById("area-description");
+  const contenido = document.getElementById("catalog-message");
+
+  titulo.textContent = datos.title;
+  descripcion.textContent = datos.description;
+
+  if (datos.courses.length === 0) {
+
+    contenido.innerHTML = `
+      <div class="catalog-icon">📚</div>
+
+      <h3>Próximamente</h3>
+
+      <p>
+        Estamos preparando nuestra oferta académica para esta área.
+        Muy pronto encontrarás cursos, programas y diplomados disponibles.
+      </p>
+
+      <a href="#contacto" class="btn btn-orange">
+        SOLICITAR INFORMACIÓN
+      </a>
+    `;
+
+  } else {
+
+    contenido.innerHTML = `
+      <div class="catalog-cards">
+        ${datos.courses.map(curso => `
+          <div class="catalog-card">
+
+            <span class="catalog-tag">
+              ${curso.tipo}
+            </span>
+
+            <h3>${curso.nombre}</h3>
+
+            <p>${curso.descripcion}</p>
+
+            <a href="#contacto">
+              Más información →
+            </a>
+
+          </div>
+        `).join("")}
+      </div>
+    `;
+
+  }
+
+  document.getElementById("catalogo-area").scrollIntoView({
+    behavior: "smooth"
+  });
+
+}
+
+document.querySelectorAll(".area-link").forEach(enlace => {
+
+  enlace.addEventListener("click", function(event) {
+
+    event.preventDefault();
+
+    const destino = this.getAttribute("href").replace("#", "");
+
+    mostrarArea(destino);
+
+  });
+
+});
+
+</script>
 </body>
 </html>
