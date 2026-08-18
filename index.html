@@ -1150,10 +1150,23 @@ img {
 
 /* Celulares */
 @media (max-width: 600px) {
-  .areas {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 12px !important;
-  }
+ .areas {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 18px !important;
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  box-sizing: border-box !important;
+}
+
+.areas .area {
+  display: flex !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  box-sizing: border-box !important;
+}
 
   .area {
     min-height: 125px !important;
@@ -1314,7 +1327,7 @@ img {
     </p>
   </div>
 
-  
+  <div class="areas">
 <div class="area">
   <a href="#ingenieria-construccion-arquitectura" class="area-link">
     <div class="area-icon">🏗️</div>
@@ -1412,6 +1425,8 @@ img {
     <h3>Educación y Docencia</h3>
   </a>
 }
+</div>
+    
 </div>
 
 </section><section class="section area-catalog-section" id="catalogo-area">
