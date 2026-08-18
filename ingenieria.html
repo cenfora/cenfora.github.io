@@ -58,33 +58,54 @@
     }
 
     .hero-area {
-      background: #102f57;
-      color: #ffffff;
-      text-align: center;
-      padding: 70px 20px;
-    }
+  background: #f7f9fc;
+  min-height: 430px;
+  padding: 55px 6%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 50px;
+}
 
-    .hero-area .label {
-      color: #ed7100;
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: 1.5px;
-      margin-bottom: 12px;
-    }
+.hero-text {
+  max-width: 600px;
+}
 
-    .hero-area h1 {
-      font-size: 42px;
-      margin: 0 auto 15px;
-    }
+.hero-area .label {
+  color: #ed7100;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin-bottom: 15px;
+}
 
-    .hero-area p {
-      max-width: 750px;
-      margin: auto;
-      font-size: 16px;
-      line-height: 1.7;
-      color: #e8edf5;
-    }
+.hero-area h1 {
+  color: #102f57;
+  font-size: 44px;
+  line-height: 1.12;
+  margin: 0 0 20px;
+}
 
+.hero-area p {
+  color: #657386;
+  font-size: 18px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.hero-image {
+  height: 330px;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(16, 47, 87, 0.12);
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
     .section {
       padding: 65px 5%;
     }
@@ -235,14 +256,22 @@
 
 <section class="hero-area">
 
-  <div class="label">ÁREA DE FORMACIÓN</div>
+  <div class="hero-text">
 
-  <h1>Ingeniería, Construcción y Arquitectura</h1>
+    <div class="label">ÁREA DE FORMACIÓN</div>
 
-  <p>
-    Explora nuestras especialidades y encuentra formación
-    orientada al desarrollo de competencias profesionales.
-  </p>
+    <h1>Ingeniería, Construcción y Arquitectura</h1>
+
+    <p>
+      Formación especializada para fortalecer tus competencias
+      y ampliar tus oportunidades profesionales.
+    </p>
+
+  </div>
+
+  <div class="hero-image">
+    <img src="hero.png" alt="Ingeniería, Construcción y Arquitectura">
+  </div>
 
 </section>
 
