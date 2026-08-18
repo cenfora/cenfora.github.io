@@ -1836,18 +1836,6 @@ function mostrarArea(area) {
 
 }
 
-document.querySelectorAll(".area-link").forEach(enlace => {
-
-  enlace.addEventListener("click", function(event) {
-
-    event.preventDefault();
-
-    const destino = this.getAttribute("href").replace("#", "");
-
-    mostrarArea(destino);
-
-  });
-
 });
 
 </script>
