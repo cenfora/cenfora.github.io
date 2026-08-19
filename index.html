@@ -119,14 +119,33 @@ nav a:hover {
   color: white;
 }
 
-    .hero {
-      min-height: 570px;
-      display: flex;
-      align-items: center;
-      padding: 70px 7%;
-      background: linear-gradient(90deg, rgba(248,251,255,1) 0%, rgba(255,255,255,.92) 48%, rgba(255,255,255,.15) 72%), url('hero.png') right center / 55% 100% no-repeat;
-    }
+.hero {
+  min-height: 570px;
+  display: flex;
+  align-items: center;
+  padding: 70px 7%;
+  position: relative;
+  overflow: hidden;
+  background: #f8fbff;
+}
 
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--hero-image);
+  background-position: right center;
+  background-size: 55% 100%;
+  background-repeat: no-repeat;
+  z-index: 0;
+  opacity: 1;
+  transition: opacity 0.6s ease;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
     .hero-content {
       max-width: 650px;
     }
@@ -1172,6 +1191,62 @@ img {
   .area {
     min-height: 125px !important;
   }
+}/* ===== SLIDER DEL HERO ===== */
+
+.hero-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(16, 47, 87, 0.75);
+  color: white;
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 5;
+  transition: all 0.25s ease;
+}
+
+.hero-arrow:hover {
+  background: #ed7100;
+  transform: translateY(-50%) scale(1.08);
+}
+
+.hero-prev {
+  right: 51%;
+}
+
+.hero-next {
+  right: 4%;
+}
+
+.hero-dots {
+  position: absolute;
+  right: 29%;
+  bottom: 25px;
+  display: flex;
+  gap: 8px;
+  z-index: 5;
+}
+
+.hero-dot {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(16, 47, 87, 0.35);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.hero-dot.active {
+  width: 25px;
+  border-radius: 10px;
+  background: #ed7100;
 }</style>
 </head>
 
@@ -1194,17 +1269,28 @@ img {
 </header>
 
 <section class="hero" id="inicio">
+
   <div class="hero-content">
     <h1>Capacítate hoy,<br><span>lidera mañana.</span></h1>
 
     <p>
-  Desarrolla nuevas competencias, fortalece tu perfil profesional
-  y prepárate para alcanzar tus objetivos con CENFORA.
-</p>
+      Desarrolla nuevas competencias, fortalece tu perfil profesional
+      y prepárate para alcanzar tus objetivos con CENFORA.
+    </p>
 
-   <a href="#cursos-destacados" class="btn btn-orange">VER CURSOS →</a>
+    <a href="#cursos-destacados" class="btn btn-orange">VER CURSOS →</a>
     <a href="#contacto" class="btn btn-outline">SOLICITAR INFORMACIÓN</a>
   </div>
+
+  <button class="hero-arrow hero-prev" type="button">‹</button>
+  <button class="hero-arrow hero-next" type="button">›</button>
+
+  <div class="hero-dots">
+    <button class="hero-dot active" type="button" data-slide="0"></button>
+    <button class="hero-dot" type="button" data-slide="1"></button>
+    <button class="hero-dot" type="button" data-slide="2"></button>
+  </div>
+
 </section>
 
  <section class="section about-section" id="nosotros">
@@ -1839,6 +1925,75 @@ function mostrarArea(area) {
 
 });
 
-</script>
+/* ===== SLIDER HERO CENFORA ===== */
+
+const hero = document.querySelector(".hero");
+
+const heroImages = [
+  "hero.png",
+  "hero2.png",
+  "hero3.png"
+];
+
+let currentHero = 0;
+let heroTimer;
+
+function changeHero(index) {
+  currentHero = index;
+
+  hero.style.setProperty(
+    "--hero-image",
+    `url("${heroImages[currentHero]}")`
+  );
+
+  document.querySelectorAll(".hero-dot").forEach((dot, i) => {
+    dot.classList.toggle("active", i === currentHero);
+  });
+}
+
+function nextHero() {
+  currentHero = (currentHero + 1) % heroImages.length;
+  changeHero(currentHero);
+}
+
+function previousHero() {
+  currentHero =
+    (currentHero - 1 + heroImages.length) %
+    heroImages.length;
+
+  changeHero(currentHero);
+}
+
+document.querySelector(".hero-next").addEventListener("click", () => {
+  nextHero();
+  restartHeroTimer();
+});
+
+document.querySelector(".hero-prev").addEventListener("click", () => {
+  previousHero();
+  restartHeroTimer();
+});
+
+document.querySelectorAll(".hero-dot").forEach((dot) => {
+  dot.addEventListener("click", () => {
+    changeHero(Number(dot.dataset.slide));
+    restartHeroTimer();
+  });
+});
+
+function startHeroTimer() {
+  heroTimer = setInterval(nextHero, 5000);
+}
+
+function restartHeroTimer() {
+  clearInterval(heroTimer);
+  startHeroTimer();
+}
+
+/* Imagen inicial */
+changeHero(0);
+
+/* Cambio automático cada 5 segundos */
+startHeroTimer(); </script>
 </body>
 </html>
