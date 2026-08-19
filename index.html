@@ -134,15 +134,25 @@ nav a:hover {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: var(--hero-image);
-  background-position: right center;
-  background-size: 55% 100%;
-  background-repeat: no-repeat;
   z-index: 0;
-  opacity: 1;
+
+  background-image:
+    linear-gradient(
+      to right,
+      #f8fbff 0%,
+      #f8fbff 25%,
+      rgba(248, 251, 255, 0.95) 38%,
+      rgba(248, 251, 255, 0.55) 52%,
+      rgba(248, 251, 255, 0) 68%
+    ),
+    var(--hero-image);
+
+  background-position: center, right center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100% 100%, 55% 100%;
+
   transition: opacity 0.6s ease;
 }
-
 .hero-content {
   position: relative;
   z-index: 2;
