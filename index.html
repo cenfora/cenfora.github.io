@@ -1624,6 +1624,279 @@ img {
     height:32px !important;
 }
 }
+  
+/* ===== AJUSTES PROFESIONALES RESPONSIVE ===== */
+
+/* Evita desbordes horizontales y mejora el comportamiento general */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Navegación estable en laptops pequeñas */
+@media (max-width: 900px) {
+  header {
+    padding: 14px 5%;
+  }
+
+  nav {
+    gap: 8px 14px;
+  }
+
+  nav a {
+    white-space: nowrap;
+  }
+
+  .hero {
+    min-height: 500px;
+  }
+
+  .hero-arrow {
+    width: 38px;
+    height: 38px;
+    font-size: 26px;
+  }
+
+  .hero-prev {
+    left: auto;
+    right: 65px;
+  }
+
+  .hero-next {
+    right: 18px;
+  }
+
+  .hero-dots {
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+/* Tablets y celulares */
+@media (max-width: 700px) {
+  header {
+    padding: 12px 5%;
+  }
+
+  header .logo img {
+    width: 150px;
+  }
+
+  nav {
+    width: 100%;
+    justify-content: center;
+    gap: 7px 12px;
+  }
+
+  nav a {
+    font-size: 10px;
+    padding: 7px 0;
+  }
+
+  .nav-contact {
+    padding: 8px 12px !important;
+  }
+
+  .section {
+    padding: 55px 5%;
+  }
+
+  .section-title {
+    margin-bottom: 32px;
+  }
+
+  .section-title h2 {
+    font-size: 27px;
+    line-height: 1.2;
+  }
+
+  .section-title p {
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  .hero {
+    min-height: 560px;
+    padding: 0;
+  }
+
+  .hero-content {
+    padding: 55px 7%;
+    max-width: 100%;
+  }
+
+  .hero h1 {
+    font-size: clamp(34px, 9vw, 44px);
+  }
+
+  .hero p {
+    font-size: 15px;
+    max-width: 100%;
+  }
+
+  .hero::after {
+    background-size: 100% 100%, 78% 58%;
+    background-position: center, right bottom;
+  }
+
+  .hero-arrow {
+    top: auto;
+    bottom: 18px;
+  }
+
+  .hero-prev {
+    right: 65px;
+  }
+
+  .hero-next {
+    right: 18px;
+  }
+
+  .hero-dots {
+    bottom: 34px;
+    right: 50%;
+  }
+
+  .about-container,
+  .future-container {
+    gap: 28px;
+  }
+
+  .about-text h2,
+  .future-text h2 {
+    font-size: 29px;
+  }
+
+  .why-content {
+    padding: 42px 20px 24px;
+  }
+
+  .offers {
+    width: 100% !important;
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  .offers .offer-card {
+    height: 300px !important;
+  }
+
+  .course-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .course-content {
+    padding: 22px;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    text-align: center;
+  }
+
+  footer {
+    padding: 45px 6% 18px;
+  }
+}
+
+/* Celulares pequeños: botones y textos sin amontonarse */
+@media (max-width: 430px) {
+  header .logo img {
+    width: 135px;
+  }
+
+  nav {
+    gap: 5px 9px;
+  }
+
+  nav a {
+    font-size: 9px;
+  }
+
+  .nav-contact {
+    padding: 7px 9px !important;
+  }
+
+  .hero-content {
+    padding: 42px 6%;
+  }
+
+  .hero h1 {
+    font-size: 33px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: none;
+    margin-left: 0 !important;
+  }
+
+  .areas {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px !important;
+  }
+
+  .area {
+    min-height: 115px !important;
+  }
+
+  .area-link h3 {
+    font-size: 11px;
+  }
+
+  .offers .offer-card {
+    height: 260px !important;
+  }
+
+  .offers .offer-label {
+    height: 52px !important;
+    font-size: 14px !important;
+    padding: 0 13px !important;
+  }
+
+  .why-cards {
+    max-width: 100%;
+  }
+
+  .why-image {
+    height: 185px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .stat h2 {
+    font-size: 28px;
+  }
+
+  .stat p {
+    font-size: 11px;
+  }
+
+  .whatsapp-float {
+    width: 54px;
+    height: 54px;
+    right: 15px;
+    bottom: 15px;
+  }
+
+  .whatsapp-float svg {
+    width: 30px !important;
+    height: 30px !important;
+  }
+}
+
   </style>
 </head>
 
@@ -1641,7 +1914,7 @@ img {
     <a href="#cursos-destacados">CURSOS</a>
     <a href="#certificaciones">CERTIFICACIONES</a>
     <a href="#diplomados">DIPLOMADOS</a>
-    <a href="#contacto" class="btn btn-orange">CONTÁCTANOS →</a>
+    <a href="#contacto-footer" class="btn btn-orange">CONTÁCTANOS →</a>
   </nav>
 </header>
 
@@ -1656,7 +1929,7 @@ img {
     </p>
 
     <a href="#cursos-destacados" class="btn btn-orange">VER CURSOS →</a>
-    <a href="#contacto" class="btn btn-outline">SOLICITAR INFORMACIÓN</a>
+    <a href="#contacto-footer" class="btn btn-outline">SOLICITAR INFORMACIÓN</a>
   </div>
 
   <button class="hero-arrow hero-prev" type="button">‹</button>
@@ -2010,7 +2283,7 @@ img {
           Desarrolla habilidades para trabajar con funciones,
           análisis de datos y herramientas avanzadas.
         </p>
-        <a href="#contacto">Más información →</a>
+        <a href="#contacto-footer">Más información →</a>
       </div>
     </div>
 
@@ -2025,7 +2298,7 @@ img {
           Aprende a transformar datos en información útil
           para la toma de decisiones.
         </p>
-        <a href="#contacto">Más información →</a>
+        <a href="#contacto-footer">Más información →</a>
       </div>
     </div>
 
@@ -2040,7 +2313,7 @@ img {
           Fortalece tus conocimientos en organización,
           gestión y herramientas administrativas.
         </p>
-        <a href="#contacto">Más información →</a>
+        <a href="#contacto-footer">Más información →</a>
       </div>
     </div>
 
@@ -2052,19 +2325,7 @@ img {
 </a>
     </a>
   </div>
-
-
-
-<section class="cta" id="contacto">
-  <div>
-    <h2>¿Tienes alguna consulta?</h2>
-    <p>Conoce nuestra oferta de formación y encuentra el programa ideal para ti.</p>
-  </div>
-
-  <a href="#cursos" class="btn btn-orange">VER NUESTRA OFERTA →</a>
-</section>
-
-<footer>
+<footer id="contacto-footer">
   <div class="footer-content">
 
     <div>
@@ -2198,7 +2459,7 @@ function mostrarArea(area) {
         Muy pronto encontrarás cursos, programas y diplomados disponibles.
       </p>
 
-      <a href="#contacto" class="btn btn-orange">
+      <a href="#contacto-footer" class="btn btn-orange">
         SOLICITAR INFORMACIÓN
       </a>
     `;
@@ -2218,7 +2479,7 @@ function mostrarArea(area) {
 
             <p>${curso.descripcion}</p>
 
-            <a href="#contacto">
+            <a href="#contacto-footer">
               Más información →
             </a>
 
