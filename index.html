@@ -67,6 +67,14 @@ footer{background:#081d36;color:#fff;padding:65px 0 22px}.footer-grid{display:gr
 .syllabus-modal .syllabus-body{max-height:72vh;overflow:auto;padding-right:6px}.syllabus-course{border:1px solid #e3e9f0;border-radius:14px;background:#fff;overflow:hidden}.syllabus-course-toggle{width:100%;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:17px 20px;border:0;background:#f7f9fc;color:#102f57;font:700 15px/1.35 Inter,Arial,sans-serif;text-align:left;cursor:pointer}.syllabus-course-toggle:hover{background:#eef3f8}.syllabus-course-toggle span:last-child{color:#ed7100;font-size:22px}.syllabus-course.open .syllabus-course-toggle span:last-child{transform:rotate(45deg)}.syllabus-modules{display:none;padding:8px 20px 20px;background:#fff}.syllabus-course.open .syllabus-modules{display:block}.syllabus-module{padding:14px 0;border-bottom:1px solid #edf1f5}.syllabus-module:last-child{border-bottom:0}.syllabus-module h4{margin:0 0 8px;color:#102f57;font-size:13px;line-height:1.4}.syllabus-module ul{margin:0;padding-left:20px;color:#586779;font-size:12px;line-height:1.65}.syllabus-module li{margin:2px 0}.syllabus-grid{display:grid;gap:10px}.syllabus-note{margin-bottom:15px}.syllabus-footer-note{margin-top:18px}
 @media(max-width:700px){.syllabus-modal .syllabus-body{max-height:76vh}.syllabus-course-toggle{padding:15px;font-size:14px}.syllabus-modules{padding:6px 15px 15px}.syllabus-module h4{font-size:12px}.syllabus-module ul{font-size:11px}}
 </style>
+
+<style>
+/* Ajustes V12: presentación más limpia */
+.about-photo-single::before,
+.about-photo-single::after,
+.about-visual::before,
+.about-visual::after { content:none !important; display:none !important; }
+</style>
 </head>
 <body>
 <div class="topbar"><div class="container"><span>Centro de Formación y Certificación Avanzada</span><strong>Formación orientada al crecimiento académico y profesional</strong></div></div>
@@ -91,33 +99,10 @@ footer{background:#081d36;color:#fff;padding:65px 0 22px}.footer-grid{display:gr
   <button class="hero-arrow hero-prev" type="button" aria-label="Anterior">‹</button><button class="hero-arrow hero-next" type="button" aria-label="Siguiente">›</button>
   <div class="hero-dots"><button class="hero-dot active" data-slide="0"></button><button class="hero-dot" data-slide="1"></button><button class="hero-dot" data-slide="2"></button></div>
 </section>
-
-<section class="trust"><div class="container trust-grid">
-  <div class="trust-item"><div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M3 10l9-6 9 6-9 6-9-6Z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></div><div><h4>Formación de calidad</h4><p>Contenido actualizado y orientado al desarrollo.</p></div></div>
-  <div class="trust-item"><div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M7 3h10v18H7z"/><path d="M9 7h6M9 11h6M9 15h4"/></svg></div><div><h4>Certificación</h4><p>Documenta tu aprendizaje y desarrollo.</p></div></div>
-  <div class="trust-item"><div class="trust-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="3"/><path d="M5 21a7 7 0 0 1 14 0"/></svg></div><div><h4>Perfil profesional</h4><p>Competencias aplicables a tu crecimiento.</p></div></div>
-  <div class="trust-item"><div class="trust-icon"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M8 21h8M12 19v2"/></svg></div><div><h4>Oferta multidisciplinaria</h4><p>Opciones en distintas áreas académicas.</p></div></div>
-</div></section>
-
 <section class="section about" id="nosotros"><div class="container about-grid">
-  <div class="about-copy"><span class="eyebrow">Conoce CENFORA</span><h2>Formación para impulsar tu desarrollo profesional</h2><p>CENFORA - Centro de Formación y Certificación Avanzada es una institución orientada a brindar oportunidades de capacitación y desarrollo de competencias para estudiantes, profesionales y personas que buscan fortalecer su perfil.</p><p>Nuestra propuesta integra formación, actualización y certificación, con una visión de crecimiento continuo hacia nuevos cursos, programas especializados y diplomados.</p><div class="about-list"><div><span>✓</span>Actualización profesional</div><div><span>✓</span>Desarrollo de competencias</div><div><span>✓</span>Oferta multidisciplinaria</div><div><span>✓</span>Formación continua</div></div><a href="#oferta" class="btn btn-orange">CONOCE NUESTRA OFERTA →</a></div>
-  <div class="about-visual"><div class="about-photo-single"><img src="why3.png" alt="Formación y desarrollo profesional en CENFORA"></div></div>
+  <div class="about-copy"><span class="eyebrow">Conoce CENFORA</span><h2>Formación para impulsar tu desarrollo profesional</h2><p>CENFORA - Centro de Formación y Certificación Avanzada es una institución orientada a brindar oportunidades de capacitación y desarrollo de competencias para estudiantes, profesionales y personas que buscan fortalecer su perfil.</p><p>Nuestra propuesta integra formación, actualización y certificación, con una visión de crecimiento continuo hacia nuevos cursos, programas especializados y diplomados.</p><div class="about-list"><div><span>✓</span>Actualización profesional</div><div><span>✓</span>Desarrollo de competencias</div><div><span>✓</span>Oferta multidisciplinaria</div><div><span>✓</span>Formación continua</div></div></div>
+  <div class="about-visual"><div class="about-photo-single"><img src="https://images.unsplash.com/photo-1758270704587-43339a801396?auto=format&fit=crop&fm=jpg&ixlib=rb-4.1.0&q=85&w=1600" alt="Formación profesional y aprendizaje"></div></div>
 </div></section>
-
-<section class="institutional-strip">
-  <div class="container institutional-inner">
-    <div class="institutional-lead">
-      <span class="eyebrow">NUESTRA PROPUESTA</span>
-      <h2>Formación pensada para el crecimiento profesional.</h2>
-    </div>
-    <div class="institutional-pillars">
-      <div class="pillar"><div class="pillar-icon"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H4z"/><path d="M8 20h8M12 16v4"/></svg></div><div><strong>Formación</strong><span>Contenido práctico y actualizado.</span></div></div>
-      <div class="pillar"><div class="pillar-icon"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 7.7-7 10-4-2.3-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></div><div><strong>Especialización</strong><span>Programas orientados a cada perfil.</span></div></div>
-      <div class="pillar"><div class="pillar-icon"><svg viewBox="0 0 24 24"><path d="M6 4h12v16H6z"/><path d="M9 8h6M9 12h6M9 16h4"/></svg></div><div><strong>Certificación</strong><span>Respalda tu formación y desarrollo.</span></div></div>
-    </div>
-  </div>
-</section>
-
 <section class="section audience"><div class="container"><div class="section-title"><span class="eyebrow">Nuestra comunidad</span><h2>Una propuesta para cada etapa profesional</h2><p>Encuentra una ruta de formación alineada con tus objetivos académicos y profesionales.</p></div><div class="audience-grid">
   <div class="audience-card"><div class="audience-icon"><svg viewBox="0 0 24 24"><path d="M4 5h16v12H4z"/><path d="M8 21h8M12 17v4"/></svg></div><h3>Estudiantes</h3><p>Fortalece tus conocimientos y complementa tu formación académica.</p></div>
   <div class="audience-card"><div class="audience-icon"><svg viewBox="0 0 24 24"><path d="M4 20V7l8-4 8 4v13"/><path d="M9 20v-5h6v5"/></svg></div><h3>Profesionales</h3><p>Actualiza y amplía competencias para fortalecer tu perfil.</p></div>
@@ -125,7 +110,7 @@ footer{background:#081d36;color:#fff;padding:65px 0 22px}.footer-grid{display:gr
   <div class="audience-card"><div class="audience-icon"><svg viewBox="0 0 24 24"><path d="M3 21V6h18v15"/><path d="M7 10h3M14 10h3M7 14h3M14 14h3M7 18h10"/></svg></div><h3>Organizaciones</h3><p>Explora oportunidades de capacitación y desarrollo profesional.</p></div>
 </div></div></section>
 
-<section class="section why"><div class="container"><div class="section-title"><span class="eyebrow">Nuestra propuesta</span><h2>¿Por qué elegir CENFORA?</h2><p>Formación pensada para ayudarte a fortalecer tus conocimientos y seguir creciendo profesionalmente.</p></div><div class="why-grid">
+<section class="section why"><div class="container"><div class="section-title"><span class="eyebrow">Nuestra propuesta</span><h2>Una formación pensada para tu desarrollo</h2><p>Formación pensada para ayudarte a fortalecer tus conocimientos y seguir creciendo profesionalmente.</p></div><div class="why-grid">
   <article class="why-card"><div class="why-image"><img src="why1.png" alt="Formación de calidad"><div class="why-icon">✓</div></div><div class="why-content"><h3>Formación de calidad</h3><p>Programas diseñados para desarrollar y fortalecer tus competencias.</p></div></article>
   <article class="why-card"><div class="why-image"><img src="why2.png" alt="Metodología moderna"><div class="why-icon">↗</div></div><div class="why-content"><h3>Metodología moderna</h3><p>Contenido actualizado y herramientas prácticas aplicables.</p></div></article>
   <article class="why-card"><div class="why-image"><img src="why3.png" alt="Certificación"><div class="why-icon">★</div></div><div class="why-content"><h3>Certificación</h3><p>Documenta tu proceso de formación y fortalece tu perfil profesional.</p></div></article>
@@ -200,11 +185,16 @@ function openSyllabus(key){
   if(!d)return;
   syllabusTitle.textContent=d.emoji+' '+d.title;
   syllabusIntro.textContent='Explora los programas y cursos de especialización disponibles en esta área de formación.';
-  syllabusBody.innerHTML='<div class=\"syllabus-note\"><strong>Cursos disponibles:</strong> '+d.courses.length+' programas especializados. Cada programa incluye 8 cursos de especialización, con 15 contenidos detallados en cada uno.</div><div class=\"syllabus-grid\">'+d.courses.map((c,i)=>'<article class=\"syllabus-course '+(i===0?'open':'')+'\"><button type=\"button\" class=\"syllabus-course-toggle\"><span>'+String(i+1).padStart(2,'0')+' · '+c.name+'</span><span>+</span></button><div class=\"syllabus-modules\">'+c.modules.map(m=>'<section class=\"syllabus-module\"><h4>'+m.title+'</h4><ol>'+m.topics.map(t=>'<li>'+t+'</li>').join('')+'</ol></section>').join('')+'</div></article>').join('')+'</div><div class=\"syllabus-footer-note\">CENFORA · Centro de Formación y Certificación Avanzada</div>';
+  syllabusBody.innerHTML='<div class=\"syllabus-note\"><strong>Cursos disponibles:</strong> '+d.courses.length+' programas especializados. Cada programa incluye 8 cursos de especialización, con 15 contenidos detallados en cada uno.</div><div class=\"syllabus-grid\">'+d.courses.map((c,i)=>'<article class=\"syllabus-course '+''+'\"><button type=\"button\" class=\"syllabus-course-toggle\"><span>'+String(i+1).padStart(2,'0')+' · '+c.name+'</span><span>+</span></button><div class=\"syllabus-modules\">'+c.modules.map(m=>'<section class=\"syllabus-module\"><h4>'+m.title+'</h4><ol>'+m.topics.map(t=>'<li>'+t+'</li>').join('')+'</ol></section>').join('')+'</div></article>').join('')+'</div><div class=\"syllabus-footer-note\">CENFORA · Centro de Formación y Certificación Avanzada</div>';
   syllabusModal.classList.add('open');
   syllabusModal.setAttribute('aria-hidden','false');
   document.body.classList.add('modal-open');
-  syllabusBody.querySelectorAll('.syllabus-course-toggle').forEach(b=>b.addEventListener('click',()=>b.parentElement.classList.toggle('open')));
+  syllabusBody.querySelectorAll('.syllabus-course-toggle').forEach(b=>b.addEventListener('click',()=>{
+    const selected=b.parentElement;
+    const wasOpen=selected.classList.contains('open');
+    syllabusBody.querySelectorAll('.syllabus-course').forEach(c=>c.classList.remove('open'));
+    if(!wasOpen) selected.classList.add('open');
+  }));
 }
 function closeSyllabus(){syllabusModal.classList.remove('open');syllabusModal.setAttribute('aria-hidden','true');document.body.classList.remove('modal-open')}
 document.querySelectorAll('.area-link[data-area]').forEach(b=>b.addEventListener('click',()=>openSyllabus(b.dataset.area)));document.querySelectorAll('[data-close-syllabus]').forEach(b=>b.addEventListener('click',closeSyllabus));document.addEventListener('keydown',e=>{if(e.key==='Escape'&&syllabusModal.classList.contains('open'))closeSyllabus()});
